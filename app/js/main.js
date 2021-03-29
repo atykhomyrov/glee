@@ -6,4 +6,5 @@ $('.top-slider__inner').slick({
   autoplay: true,
   autoplaySpeed: 2000
 })
+  mixitup('.products__list')
 });

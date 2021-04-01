@@ -11,6 +11,10 @@ body {
   flex-direction: column;
 }
 
+a {
+  color: inherit;
+}
+
 .main {
   flex-grow: 1;
 }
@@ -25,4 +29,12 @@ body {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 1;
+  @extend %dmsans-700;
+  color: $title;
 }

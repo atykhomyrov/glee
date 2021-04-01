@@ -7,4 +7,5 @@ $('.top-slider__inner').slick({
   autoplaySpeed: 2000
 })
   mixitup('.products__list')
+  mixitup('.new-design__list')
 });

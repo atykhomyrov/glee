@@ -30,3 +30,10 @@ $title: #191919;
   font-family: 'DMSans-Bold', sans-serif;
   font-weight: 700;
 }
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function max($numbers...) {
+  @return m#{i}x(#{$numbers});
+}

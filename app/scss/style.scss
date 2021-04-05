@@ -9,18 +9,16 @@
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  font-size: 36px;
-  line-height: 1.6;
-  color: inherit;
-  @extend %rubik-500;
-  color: #436372;
+  max-width: 146px;
+
+  &__img {
+    height: 39px;
+    object-fit: cover;
+  }
 }
 
-.menu__logo {
-  justify-content: space-between;
-  margin-right: 153px;
+.header__logo {
+  margin-right: 150px;
 }
 
 .menu {
@@ -172,8 +170,8 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    padding-bottom: 70px;
+    align-items: flex-start;
+    padding-bottom: 43px;
     border-bottom: 1px solid #dae4e9;
     color: #7b7b7b;
   }
@@ -283,12 +281,12 @@
   }
 
   &__menu-item:not(:last-child) {
-    padding-right: 12px;
+    padding-right: 15px;
     border-right: 1px solid #7b7b7b;
   }
 
   &__menu-item:not(:first-child) {
-    padding-left: 12px;
+    padding-left: 15px;
   }
 
   &__menu-link {
@@ -345,6 +343,15 @@
 
   &__arrow {
     margin-left: 60px;
+    width: 22px;
+    height: 9px;
+    fill: #ffffff;
+  }
+
+  &__img {
+    max-width: 640px;
+    min-height: 264px;
+    object-fit: cover;
   }
 
   .slick-dots {
@@ -465,7 +472,6 @@
     flex-direction: column;
     justify-content: space-around;
     position: relative;
-   
   }
 
   &__choice {
@@ -484,7 +490,10 @@
 
   &__img {
     margin: 0 auto;
-    object-fit: contain;
+    height: 195px;
+    object-fit: scale-down;
+    object-position: bottom;
+    margin-bottom: 33px;
   }
 
   &__choice-inner {
@@ -511,9 +520,29 @@
     margin-top: 13px;
   }
 
+  &__choice-search {
+    width: 20px;
+    height: 20px;
+    fill: #a3bbc8;
+  }
+
+  &__choice-cart {
+    width: 22px;
+    height: 20px;
+    fill: #a3bbc8;
+  }
+
+  &__choice-wish {
+    width: 22px;
+    height: 18px;
+    fill: #a3bbc8;
+  }
+
   &__choice-link:hover {
    background-color: #a3bbc8;
-    path {
+   .products__choice-search,
+   .products__choice-cart,
+   .products__choice-wish {
       fill: #ffffff;
     }
   }
@@ -585,9 +614,13 @@
     border: 1px solid #b3b7b5;
     border-radius: 5px;
     color: $default;
-    svg {
-      margin-left: 45px;
-    }
+  }
+
+  &__arrow {
+    width: 22px;
+    height: 9px;
+    fill: #436372;
+    margin-left: 45px;
   }
 }
 
@@ -629,8 +662,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: minmax(246px, auto) minmax(246px, auto);
-    grid-column-gap: 30px;
-    grid-row-gap: 34px;
+    grid-gap: 30px 34px;
     
   }
 
@@ -685,8 +717,105 @@
       left: 0;
     }
   }
-
 }
+
+.news {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 48px;
+  }
+
+  &__more {
+    padding-right: 25px;
+    position: relative;
+
+    &::after {
+      content: ">";
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 370px;
+    width: 100%;
+    position: relative;
+  }
+
+  &__img {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  &__label {
+    @extend %poppins-700;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #a3bbc8;
+    border-radius: 15px;
+    padding: 7px 30px 5px;
+    color: #ffffff;
+    position: absolute;
+    top: 233px;
+    left: 29px;
+    line-height: 1.4;
+  }
+
+  &__content {
+    padding: 35px 50px 18px 30px;
+    background-color: #ffffff;
+  }
+
+  &__text {
+    @extend %dmsans-500;
+    font-size: 18px;
+    line-height: 1;
+    color: #262626;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+    margin-bottom: 7px;
+    min-height: 80px;
+  }
+
+  &__info {
+    font-size: 12px;
+    line-height: 2.5;
+    color: #222933;
+  }
+
+  &__date {
+    margin-right: 30px;
+  }
+}
+
+.partners {
+  background-color: #fef7f0;
+  padding: 266px 0 81px;
+  margin-top: -169px;
+
+  .slick-slider {
+    padding: 0 50px;
+  }
+
+  &__logo {
+    height: 84px;
+    object-fit: scale-down;
+    object-position: center;
+  }
+}
+
+
+
+
+
+
 
 
 @import 'media';

@@ -1,0 +1,136 @@
+.footer {
+  padding: 82px 0 30px;
+  font-size: 14px;
+  line-height: 1.7;
+  
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 64px;
+    border-bottom: 1px solid #dae4e9;
+    color: $grey;
+  }
+
+  &__logo {
+    margin-bottom: 25px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__contacts {
+    max-width: 200px;
+  }
+
+  &__item-name {
+    text-transform: uppercase;
+  }
+
+  &__item-link,
+  .footer__menu-link {
+    transition: color .5s ease;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__services {
+    margin-right: 80px;
+  }
+
+  &__account {
+    margin-right: 113px;
+  }
+
+  &__services,
+  .footer__account,
+  .footer__newsletter {
+    padding-top: 17px;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #1f2044;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  &__link {
+    line-height: 2.3;
+    color: $grey;
+  }
+
+  &__newsletter {
+    max-width: 270px;
+  }
+
+  &__newsletter-text {
+    margin-bottom: 38px;
+  }
+
+  &__mailto {
+    padding: 0 15px;
+    width: 170px;
+    height: 40px;
+    background-color: $bg-light;
+    border: none;
+    @extend %dmsans-400;
+    font-size: 12px;
+    line-height: 1;
+    color: #234969;
+  }
+
+  &__mailto::placeholder {
+    @extend %dmsans-400;
+    font-size: 12px;
+    line-height: 1;
+    color: #234969;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__btn {
+    padding: 5px 16px;
+    background-color: $accent;
+    @extend %dmsans-400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ffffff;
+    transition: background-color .5s ease;
+
+    &:hover {
+      background-color: $default;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+    color: $grey;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  &__menu-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__menu-item:not(:last-child) {
+    padding-right: 15px;
+    border-right: 1px solid $grey;
+  }
+
+  &__menu-item:not(:first-child) {
+    padding-left: 15px;
+  }
+}

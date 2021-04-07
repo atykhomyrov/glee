@@ -4,11 +4,43 @@ body {
 }
 
 body {
-  color: #585858;
+  color: $body;
   font-size: 16px;
+  line-height: 1;
   @extend %rubik-400;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline-color: $accent;
+  padding: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .main {
@@ -19,10 +51,20 @@ body {
   max-width: 1800px;
   padding: 0 15px;
   margin: 0 auto;
+
+  &--sm {
+    max-width: 1200px;
+  }
 }
 
-.holder {
-  max-width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
+.title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 1;
+  @extend %dmsans-700;
+  color: $title;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
 }

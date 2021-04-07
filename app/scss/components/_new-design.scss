@@ -1,0 +1,83 @@
+.new-design {
+  padding: 100px 0 114px;
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__inner {
+    margin-bottom: 126px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(246px, auto) minmax(246px, auto);
+    grid-gap: 30px 34px;
+  }
+
+  &__item {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 39px 134px 0 37px;
+  }
+  
+  &__link {
+    @extend %dmsans-700;
+  }
+
+  &__subtitle {
+    display: block;
+    color: $title;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 17px;
+    transition: color .5s ease;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__style {
+    color: $accent;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  }
+}
+
+.video {
+  min-height: 501px;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__link {
+    position: relative;
+    padding: 64px;
+
+    &::before{
+      content: "";
+      position: absolute;
+      width: 127px;
+      height: 127px;
+      background-image: url('../images/icons/play-btn.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+    }
+  }
+}

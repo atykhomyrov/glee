@@ -1,0 +1,143 @@
+.header {
+  padding: 48px 0 47px;
+}
+
+.logo {
+  max-width: 146px;
+
+  &__img {
+    height: 39px;
+    object-fit: cover;
+  }
+}
+
+.header__logo {
+  margin-right: 150px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #436372;
+  @extend %rubik-500;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    font-size: 15px;
+    line-height: 1;
+    transition: color .5s ease;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+
+  &__user-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__user-item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__btn{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+  }
+
+  &__search {
+    background-color: #edf1f4;
+    margin-right: 20px;
+  }
+
+  &__panel {
+    background-color: $accent;
+  }
+
+  &__search-icon {
+    width: 15px;
+    height: 15px;
+  }
+
+  &__search-icon,
+  .menu__panel-icon {
+    position: absolute;
+    top: 15px;
+    left: 16px;
+  }
+
+  &__favorites-icon {
+    width: 18px;
+    height: 15px;
+  }
+
+  &__cart-icon {
+    width: 19px;
+    height: 17px;
+  }
+
+  &__panel-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__inner {
+    display: flex;
+    width: 176px;
+    border-radius: 25px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $bg;
+    margin-right: 20px;
+  }
+
+  &__favorites,
+  &__cart {
+    width: 88px;
+    height: 51px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__favorites::after {
+    content: "";
+    width: 1px;
+    height: 30px;
+    background-color: #fde7d3;
+    position: absolute;
+    left: 88px;
+  }
+
+  &__num {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: center;
+    top: 10px;
+    right: 25px;
+    color: $default;
+    @extend %dmsans-400;
+  }
+}

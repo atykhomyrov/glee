@@ -68,11 +68,9 @@
     margin-bottom: 7px;
     min-height: 80px;
     transition: color .5s ease;
-    display: -webkit-box;
     -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;  
-    overflow: hidden;
-
+    @include cut-text;
+    
     &:hover {
       color: $accent;
     }

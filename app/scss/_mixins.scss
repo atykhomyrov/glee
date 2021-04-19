@@ -8,7 +8,7 @@
   @media (max-width: 575px) { @content; }
 }
 @mixin for-phone-only {
-  @media (max-width: 599px) { @content; }
+  @media (max-width: 415px) { @content; }
 }
 
 

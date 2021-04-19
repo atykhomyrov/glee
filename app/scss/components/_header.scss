@@ -41,10 +41,12 @@
       width: 100%;
       z-index: 5;
       transition: transform .5s ease;
+      background-color: #fff;
       &.menu__list--active {
         transform: translateY(0%);
         @include for-tablet-portrait-up {
         top: 190px;
+        background-color: #fff;
         } 
       }
     }

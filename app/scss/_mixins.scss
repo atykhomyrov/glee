@@ -4,6 +4,9 @@
 @mixin for-tablet-landscape-up {
   @media (max-width: 1050px) { @content; }
 }
+@mixin for-tablet-medium-up {
+  @media (max-width: 860px) { @content; }
+}
 @mixin for-tablet-portrait-up {
   @media (max-width: 575px) { @content; }
 }

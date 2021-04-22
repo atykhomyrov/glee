@@ -174,15 +174,16 @@
         margin-right: 0;
         margin-bottom: 110px;
       }
+      @include for-phone-only {
+        margin-bottom: 80px;
+      }
     }
     @include for-tablet-landscape-up {
       max-width: 100%;
       justify-content: space-around;
       padding-bottom: 42px;
     }
-    @include for-phone-only {
-      margin-bottom: 80px;
-    }
+    
   }
 
   &__lamp-img {

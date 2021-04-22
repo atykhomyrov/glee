@@ -1,5 +1,8 @@
 .new-design {
   padding: 100px 0 114px;
+  @include for-tablet-landscape-up {
+    padding: 60px 0 70px;
+  }
 
   &__title {
     margin-bottom: 25px;
@@ -7,6 +10,9 @@
 
   &__inner {
     margin-bottom: 126px;
+    @include for-tablet-landscape-up {
+      margin-bottom: 60px;
+    }
   }
 
   &__list {
@@ -14,6 +20,17 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: minmax(246px, auto) minmax(246px, auto);
     grid-gap: 30px 34px;
+    @include for-tablet-landscape-up {
+      grid-gap: 25px;
+    }
+    @include for-tablet-medium-up {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: minmax(246px, auto) minmax(246px, auto) minmax(246px, auto);
+    }
+    @include for-tablet-portrait-up {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: minmax(246px, auto) minmax(246px, auto) minmax(246px, auto) minmax(246px, auto) minmax(246px, auto) minmax(246px, auto);
+    }
   }
 
   &__item {
@@ -21,6 +38,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 39px 134px 0 37px;
+    @include for-desktop-up {
+      padding: 10px 28px 0 37px;
+    }
   }
   
   &__link {
@@ -34,11 +54,14 @@
     line-height: 1.2;
     margin-bottom: 17px;
     transition: color .5s ease;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 4;
     @include cut-text;
 
     &:hover {
       color: $accent;
+    }
+    @include for-tablet-landscape-up {
+      margin-bottom: 14px;
     }
   }
 
@@ -51,17 +74,31 @@
 
 .video {
   min-height: 501px;
-  height: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
+  @include for-tablet-landscape-up {
+    min-height: 300px;
+  }
+  @include for-tablet-medium-up  {
+    min-height: 220px;
+  }
+  @include for-tablet-portrait-up {
+    min-height: 160px;
+  }
 
   &__link {
     position: relative;
     padding: 64px;
+    @include for-tablet-medium-up  {
+      padding: 50px;
+    }
+    @include for-tablet-portrait-up {
+      padding: 38px;
+    }
 
     &::before{
       content: "";
@@ -74,6 +111,14 @@
       background-repeat: no-repeat;
       top: 0;
       left: 0;
+      @include for-tablet-medium-up  {
+        width: 100px;
+        height: 100px;
+      }
+      @include for-tablet-portrait-up {
+        width: 75px;
+        height: 75px;
+      }
     }
   }
 }

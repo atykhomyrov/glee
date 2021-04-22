@@ -4,6 +4,17 @@
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 48px;
+    @include for-phone-only  {
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__title {
+    @include for-phone-only  {
+      text-align: left;
+      margin-bottom: 10px;
+    }
   }
 
   &__more {
@@ -25,12 +36,30 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    @include for-tablet-landscape-up {
+      justify-content: space-around;
+    }
   }
 
   &__item {
     max-width: 370px;
-    width: 100%;
     position: relative;
+    @include for-desktop-up {
+      max-width: 320px;
+    }
+    @include for-tablet-landscape-up {
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+    @include for-tablet-medium-up {
+      max-width: 255px;
+    }
+    @include for-tablet-portrait-up {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
   }
 
   &__img {
@@ -56,6 +85,10 @@
   &__content {
     padding: 35px 50px 18px 30px;
     background-color: #ffffff;
+    min-height: 192px;
+    @include for-tablet-medium-up {
+     min-height: 175px
+    }
   }
 
   &__text {
@@ -74,6 +107,9 @@
     &:hover {
       color: $accent;
     }
+    @include for-tablet-medium-up  {
+      font-size: 15px;
+    }
   }
 
   &__info {
@@ -84,6 +120,9 @@
 
   &__date {
     margin-right: 30px;
+    @include for-tablet-medium-up  {
+      margin-right: 10px;
+    }
   }
 
   &__author {
@@ -99,11 +138,20 @@
   background-color: #fef7f0;
   padding: 266px 0 81px;
   margin-top: -169px;
+  @include for-tablet-portrait-up {
+    padding: 210px 0 40px;
+  }
+  @include for-phone-only {
+    padding: 190px 0 10px;
+  }
 
   &__logo {
     width: 214px;
     height: 84px;
     object-fit: scale-down;
     object-position: center;
+    @include for-tablet-landscape-up {
+      padding: 0 10px;
+    }
   }
 }

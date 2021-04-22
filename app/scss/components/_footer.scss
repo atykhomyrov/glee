@@ -2,6 +2,9 @@
   padding: 82px 0 30px;
   font-size: 14px;
   line-height: 1.7;
+  @include for-tablet-landscape-up {
+    padding: 40px 0 30px;
+  }
   
   &__top {
     display: flex;

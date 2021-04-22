@@ -5,6 +5,16 @@
     grid-template-rows: minmax(380px, auto) minmax(380px, auto);
     grid-gap: 42px 30px;
     margin-bottom: 80px;
+    @include for-tablet-landscape-up {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+    }
+    @include for-tablet-medium-up {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include for-tablet-portrait-up {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
@@ -15,6 +25,10 @@
     flex-direction: column;
     justify-content: space-around;
     position: relative;
+    @include for-tablet-landscape-up {
+      padding-top: 20px;
+    }
+
   }
 
   &__choice {
@@ -120,6 +134,9 @@
 .products {
   padding: 75px 0 0;
   text-align: center;
+  @include for-tablet-medium-up {
+    padding: 40px 0 0;
+  }
 
   &__title {
     margin-bottom: 29px;
@@ -127,12 +144,18 @@
 
   &__shine {
     margin-top: 186px;
+    @include for-phone-only {
+      margin-top: 100px;
+    }
   }
 
   &__lamp {
     display: flex;
     justify-content: space-between;
     color: $default;
+    @include for-tablet-landscape-up {
+      flex-wrap: wrap;
+    }
   }
 
   &__lamp-item {
@@ -143,12 +166,36 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 82px;
+    &:not(:last-child) {
+      @include for-desktop-up {
+        margin-right: 10px;
+      }
+      @include for-tablet-landscape-up{
+        margin-right: 0;
+        margin-bottom: 110px;
+      }
+      @include for-phone-only {
+        margin-bottom: 80px;
+      }
+    }
+    @include for-tablet-landscape-up {
+      max-width: 100%;
+      justify-content: space-around;
+      padding-bottom: 42px;
+    }
+    
   }
 
   &__lamp-img {
     height: 405px;
     object-fit: cover;
     margin-top:  -97px;
+    @include for-tablet-portrait-up {
+      height: 290px;
+    }
+    @include for-phone-only {
+      height: 200px;
+    }
   }
 
   &__lamp-content {
@@ -159,10 +206,19 @@
 
   &__lamp-left {
     padding: 60px 0 0 10px;
+    @include for-phone-only {
+      padding: 38px 0 0 10px;
+    }
   }
 
   &__lamp-right {
     padding: 63px 0 0 59px;
+    @include for-desktop-up {
+      padding: 63px 0 0 10px;
+    }
+    @include for-phone-only {
+      padding: 38px 0 0 10px;
+    }
   }
 
   &__lamp-title {
@@ -176,13 +232,25 @@
     &:hover {
       color: $accent;
     }
+    @include for-tablet-portrait-up {
+      font-size: 20px;
+    }
+    @include for-phone-only {
+      font-size: 18px;
+    }
   }
 
   &__lamp-text {
     line-height: 1.9;
     margin: 15px 0 46px;
     @include cut-text;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
+    @include for-tablet-portrait-up {
+      font-size: 12px;
+    }
+    @include for-phone-only {
+      margin: 15px 0 25px;
+    }
   }
 
   &__lamp-link {
@@ -199,6 +267,10 @@
         fill: $accent;
       }
     }
+    @include for-tablet-portrait-up {
+      font-size: 12px;
+      padding: 10px 43px 12px 14px;
+    }
   }
 
   &__arrow {
@@ -209,12 +281,19 @@
     top: 24px;
     right: 18px;
     transition: fill .5s ease;
+    @include for-tablet-portrait-up {
+      top: 14px;
+      right: 10px;
+    }
   }
 }
 
 .filter {
   display: flex;
   justify-content: center;
+  @include for-phone-only {
+    flex-wrap: wrap;
+  }
 
   &__btn {
     line-height: 1;
@@ -223,6 +302,12 @@
     margin-bottom: 80px;
     color: #8b8b8b;
     transition: color .5s ease;
+    @include for-tablet-medium-up {
+      margin-bottom: 40px;
+    }
+    @include for-tablet-portrait-up {
+      margin-bottom: 20px;
+    }
   }
 
   &__btn:hover,

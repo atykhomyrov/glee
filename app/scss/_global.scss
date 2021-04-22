@@ -63,6 +63,9 @@ address {
   line-height: 1;
   @extend %dmsans-700;
   color: $title;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   @include cut-text;
+  @include for-tablet-portrait-up {
+    font-size: 26px;
+  }
 }

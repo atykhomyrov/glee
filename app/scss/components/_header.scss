@@ -45,7 +45,7 @@
       &.menu__list--active {
         transform: translateY(0%);
         @include for-tablet-portrait-up {
-        top: 190px;
+        top: 110px;
         background-color: #fff;
         } 
       }
@@ -61,6 +61,7 @@
       padding: 10px 0;
       width: 100%;
       text-align: center;
+      border-bottom: 1px solid $default;
     }
 
     &:hover {

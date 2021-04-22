@@ -65,4 +65,7 @@ address {
   color: $title;
   -webkit-line-clamp: 1;
   @include cut-text;
+  @include for-tablet-portrait-up {
+    font-size: 26px;
+  }
 }

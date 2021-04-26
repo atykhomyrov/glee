@@ -1,0 +1,45 @@
+.top {
+  &__inner {
+    background-color: #edf1f4;
+    min-height: 124px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    @extend %rubik-300;
+    font-size: 36px;
+    line-height: 1.2;
+    color: $default;
+  }
+
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  line-height: 1.7;
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    color: #979ba0;
+    padding-right: 20px;
+    position: relative;
+    &::after {
+      content: "/";
+      position: absolute;
+      right: 8px;
+    }
+    &:last-child {
+      color: $default;
+      padding-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

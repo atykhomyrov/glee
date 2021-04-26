@@ -6,6 +6,11 @@ $accent: #a3bbc8;
 $grey: #7b7b7b;
 $body: #585858;
 
+%rubik-300 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+
 %rubik-400 {
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
@@ -14,6 +19,11 @@ $body: #585858;
 %rubik-500 {
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
+}
+
+%rubik-700 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
 }
 
 %poppins-700 {

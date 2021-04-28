@@ -1,22 +1,54 @@
 .mission {
   padding: 124px 0 60px;
+  @include for-desktop-up  {
+    padding: 60px 0 30px;
+  }
+  @include for-tablet-portrait-up {
+    padding: 30px 0;
+  }
+  
 
   &__inner {
     display: flex;
     justify-content: space-between;
     margin-bottom: 89px;
+    @include for-tablet-landscape-up {
+      flex-wrap: wrap;
+      margin-bottom: 45px;
+      justify-content: center;
+    }
+    @include for-tablet-portrait-up {
+      margin-bottom: 10px;
+    }
   }
 
   &__image {
     max-width: 567px;
     min-height: 674px;
     height: 100%;
+    object-fit: cover;
+    @include for-desktop-up {
+      max-width: 428px;
+      min-height: 493px;
+      padding-right: 15px;
+    }
+    @include for-tablet-portrait-up {
+      max-width: 300px;
+      min-height: 350px;
+    }
+    @include for-tablet-medium-up {
+      padding-right: 0;
+    }
   }
 
   &__box {
     max-width: 550px;
     min-height: 100px;
     padding: 66px 0;
+
+    @include for-desktop-up {
+      padding: 0;
+    }
   }
 
   &__old {
@@ -25,6 +57,13 @@
     max-width: 264px;
     align-items: center;
     margin-bottom: 27px;
+    @include for-tablet-landscape-up {
+      min-width: 100%;
+      justify-content: center;
+    }
+    @include for-tablet-portrait-up {
+      margin-bottom: 15px;
+    }
   }
 
   &__old-years {
@@ -32,6 +71,12 @@
     line-height: 1;
     color: $accent;
     @extend %rubik-700;
+    @include for-tablet-landscape-up {
+      margin-right: 10px;
+    }
+    @include for-tablet-portrait-up {
+      font-size: 100px;
+    }
   }
 
   &__old-text {
@@ -44,12 +89,18 @@
   &__content {
     margin-bottom: 55px;
     color: $default;
+    @include for-tablet-portrait-up {
+      margin-bottom: 10px;
+    }
   }
 
   &__title {
     text-align: left;
     margin-bottom: 34px;
     color: $default;
+    @include for-tablet-portrait-up {
+      margin-bottom: 20px;
+    }
   }
 
   &__text {
@@ -57,11 +108,15 @@
     margin-bottom: 40px;
     position: relative;
     padding-bottom: 60px;
+    @include for-tablet-portrait-up {
+      padding-bottom: 30px;
+    }
     &::after {
       content: "";
       position: absolute;
       height: 2px;
-      width: 500px;
+      max-width: 500px;
+      width: 100%;
       background-color: #e6eaf0;
       bottom: 0;
     }
@@ -70,6 +125,11 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    @include for-tablet-portrait-up {
+      flex-direction: column;
+      align-items: center;
+    }
+
   }
 
   &__holder {
@@ -79,6 +139,12 @@
     color: #4c4c4c;
     @extend %dmsans-700;
     text-align: center;
+    @include for-tablet-portrait-up {
+      width: 180px;
+      margin-bottom: 15px;
+      text-align: left;
+      padding-bottom: 15px;
+    }
     span {
       font-size: 36px;
       line-height: 1.1;
@@ -86,6 +152,9 @@
       color: $default;
       text-transform: uppercase;
       margin-bottom: 5px;
+      @include for-tablet-portrait-up {
+        font-size: 30px;
+      }
     }
 
     &::before {
@@ -126,6 +195,13 @@
       right: 0;
       transform: translateY(-50%);
       top: 50%;
+      @include for-tablet-portrait-up {
+        width: 190px;
+        height: 1px;
+        transform: translateY(0);
+        top: 100%;
+        bottom: 0;
+      }
     }
 
     &--awards::after {
@@ -138,18 +214,33 @@
   background-color: $bg;
   min-height: 320px;
   padding-top: 85px;
+  @include for-tablet-medium-up {
+    min-height: 290px;
+    padding-top: 50px;
+  }
+  @include for-tablet-portrait-up {
+    padding-top: 20px;
+  }
 
   &__list {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: baseline;
     text-align: center;
+    @include for-phone-only {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
     color: $default;
     @extend %dmsans-700;
     position: relative;
+    @include for-tablet-medium-up {
+      margin: 0 10px 20px 0;
+    }
     
     &::before {
       content: "";
@@ -183,11 +274,17 @@
   &__img {
     margin: 0 auto 10px;
     opacity: .9;
+    width: 67px;
+    height: 65px;
+    object-fit: contain;
   }
 
   &__numbers {
     font-size: 36px;
     line-height: 1.7;
+    @include for-tablet-portrait-up {
+      font-size: 30px;
+    }
   }
 
   &__title {
@@ -198,36 +295,58 @@
 }
 
 .team {
-  padding: 60px 0 115px;
+  padding: 60px 0 108px;
+  @include for-tablet-landscape-up {
+    padding: 30px 0 50px;
+  }
+  @include for-tablet-portrait-up {
+    padding: 0;
+  }
 
   &__inner {
     display: flex;
     justify-content: space-between;
+    @include for-tablet-landscape-up {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__wrap {
     max-width: 300px;
+    @include for-tablet-landscape-up {
+      min-width: 100%;
+      margin-bottom: 40px;
+    }
   }
 
   &__title {
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     color: $default;
   }
 
   &__text {
     line-height: 1.9;
     color: $default;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
+    @include for-tablet-landscape-up {
+      margin-bottom: 30px;
+    }
   }
 
   &__link {
     max-width: 170px;
     background-color: $accent;
-    padding: 15px 60px 13px 20px;
+    padding: 16px 60px 15px 11px;
     position: relative;
     color: #ffffff;
     border-radius: 5px;
+    transition: background-color .5s ease;
+
+    &:hover {
+      background-color: $bg;
+    }
 
     &::after {
       content: "";
@@ -246,6 +365,21 @@
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 389px;
     grid-gap: 30px;
+    @include for-ipad-up {
+      grid-auto-rows: 365px;
+      grid-gap: 20px;
+    }
+    @include for-tablet-portrait-up {
+      grid-template-columns: repeat(1, 1fr);
+      grid-auto-rows: auto;
+      grid-gap: 0;
+    }
+  }
+
+  &__img {
+    width: 370px;
+    height: 320px;
+    object-fit: cover;
   }
 
   &__box {
@@ -257,6 +391,9 @@
     background-color: #ffffff;
     box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
     transform: translateY(-40%);
+    @include for-ipad-up {
+      padding: 20px 10px;
+    }
   }
 
   &__name {

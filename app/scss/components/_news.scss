@@ -85,7 +85,7 @@
   &__content {
     padding: 35px 50px 18px 30px;
     background-color: #ffffff;
-    min-height: 192px;
+    min-height: 172px;
     @include for-tablet-medium-up {
      min-height: 175px
     }
@@ -137,7 +137,7 @@
 .partners {
   background-color: #fef7f0;
   padding: 266px 0 81px;
-  margin-top: -169px;
+  margin-top: -172px;
   @include for-tablet-portrait-up {
     padding: 210px 0 40px;
   }

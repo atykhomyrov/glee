@@ -69,3 +69,54 @@ address {
     font-size: 26px;
   }
 }
+
+.pogination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: $default;
+
+  .pogination__list {
+    display: flex;
+    margin-right: 15px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__link,
+  &__next  {
+    border: 1px solid $accent;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__link {
+    transition: background-color .5s ease;
+    &:hover {
+      background-color: $accent;
+      color: #ffffff;
+    }
+    &--active {
+      background-color: $accent;
+      color: #ffffff;
+    }
+  }
+
+  &__next {
+    width: 74px;
+    border: 1px solid $accent;
+    transition: background-color .5s ease;
+    &:hover {
+      background-color: $accent;
+      color: #ffffff;
+    }
+  }
+}

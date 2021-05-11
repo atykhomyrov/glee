@@ -1,0 +1,267 @@
+.shop {
+  padding: 115px 0;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__filter {
+    margin-right: 30px;
+    max-width: 270px;
+    width: 100%;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 43px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $default;
+    @extend %dmsans-700;
+    position: relative;
+    margin-bottom: 30px;
+    cursor: pointer;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 38px;
+      background-color: $accent;
+      top: 6px;
+      left: 110px;
+      border-radius: 2px;
+    }
+
+    &--price {
+      &::after {
+        left: 65px;
+      }
+    }
+
+    &--brand {
+      &::after {
+        left: 71px;
+      }
+    }
+
+    &--recent {
+      &::after {
+        left: 188px;
+      }
+    }
+  }
+}
+
+.shop-price {
+  padding-bottom: 44px;
+}
+
+.shop-category, 
+.shop-brand {
+  &__label {
+  display: block;
+  cursor: pointer;
+  &:not(:last-child) {
+    margin-bottom: 5px;
+    }
+  }
+
+  &__input {
+    @include checkbox-hidden;
+  }
+
+  &__checkbox {
+    color: $default;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px 11px 14px;
+    border-radius: 5px;
+  }
+
+  &__icon{
+    width: 5px;
+    height: 10px;
+  }
+}
+
+.shop-category {
+  &__input {
+    &:checked + .shop-category__checkbox {
+      background-color: #edf1f4;
+    }
+  }
+}
+
+.shop-brand {
+  &__input {
+    &:checked + .shop-brand__checkbox {
+      background-color: #edf1f4;
+      .shop-brand__quantity {
+        color: $default;
+      }
+    }
+  }
+
+  &__quantity {
+    color: #b3b3b3;
+    max-width: 25px;
+    text-align: center;
+  }
+}
+
+.shop-price {
+  &__range {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 1;
+    color: $default;
+  }
+}
+
+.irs--flat .irs-line {
+  top: 8px;
+  height: 3px;
+  background-color: #c2d2db;
+  border-radius: 4px;
+}
+
+.irs--flat .irs-bar {
+  top: 8px;
+  height: 4px;
+  background-color: $accent;
+}
+
+.irs--flat .irs-handle {
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  background-color: $accent;
+}
+
+.irs--flat .irs-handle>i:first-child {
+  display: none;
+}
+
+.irs-from, .irs-to, .irs-single {
+  display: none;
+}
+
+.irs-min, .irs-max {
+  display: none;
+}
+
+.jq-ry-container {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.shop-recent {
+  &__item {
+    max-width: 180px;
+    &:not(:last-child) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img {
+    width: 71px;
+    height: 71px;
+    object-fit: scale-down;
+    border: 2px solid #f2f2f2;
+  }
+
+  &__content {
+    color: #333333;
+    padding-top: 5px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 14px;
+  }
+
+  &__price {
+    font-size: 15px;
+  }
+}
+
+.shop-content {
+  max-width: 870px;
+  width: 100%;
+
+  &__filter {
+    border: 1px solid $accent;
+    padding: 20px 25px 20px 30px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__filter-buttons {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+  }
+
+  &__filter-btn {
+    margin-left: 15px;
+    &.shop-content__filter-btn--active {
+      .shop-content__filter-icon {
+        fill: $default;
+      }
+    }
+  }
+
+  &__filter-icon {
+    fill: #8b8b8b;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 40px 30px;
+  }
+}
+
+.jq-selectbox__select {
+  margin-left: 30px;
+  height: 0;
+  padding: 0 30px 0 0;
+  border: none;
+  background: transparent;
+  box-shadow: none; 
+  @extend %rubik-400;
+  color: $body;
+  text-shadow: none;
+  &:hover {
+    background: none;
+  }
+}
+
+.jq-selectbox__trigger {
+  border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 7px;
+  right: 12px;
+  width: 10px;
+  height: 5px;
+  border: none;
+  background-image: url('..//..//images/products-list/icons/angle-down.svg');
+}

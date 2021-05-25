@@ -120,9 +120,9 @@ $(function() {
     $('.shop-category__title').toggleClass('shop-category__form--active');
   });
 
-  $('.blog-filter__posts-title').on('click', function(){
-    $('.blog-filter__posts-list').slideToggle();
-    $('.blog-filter__posts-title').toggleClass('blog-filter__posts-list--active');
+  $('.blog-aside__posts-title').on('click', function(){
+    $('.blog-aside__posts-list').slideToggle();
+    $('.blog-aside__posts-title').toggleClass('blog-aside__posts-list--active');
   });
 
 
